@@ -3649,7 +3649,7 @@ GameObject:
   - 114: {fileID: 494799685}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: FlickeringLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3774,8 +3774,8 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 4.51332951
-  m_SpotAngle: 69.7843246
+  m_Range: 16.8955097
+  m_SpotAngle: 40.2288361
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
