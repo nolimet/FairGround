@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisCamera: {fileID: 399478793}
   lightOn: 0
-  Sec: 5
+  Sec: .100000001
   battery: 100
 --- !u!108 &399478795
 Light:

@@ -27,7 +27,13 @@ public class FlashLightTest : MonoBehaviour
 		{
 			thisCamera.GetComponent<Light> ();
 			this.light.intensity = 1.5f;
-			battery -= Time.deltaTime * Sec;
+			if( battery >= 0 )
+			{
+				battery -= Time.deltaTime * Sec;
+			}
+
+
+
 			
 		}
 		else if (lightOn == false)
@@ -43,6 +49,7 @@ public class FlashLightTest : MonoBehaviour
 		{
 			thisCamera.GetComponent<Light> ();
 			this.light.intensity = 0f;
+			battery = 0f;
 		}
 	}
 
