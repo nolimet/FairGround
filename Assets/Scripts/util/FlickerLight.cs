@@ -11,12 +11,11 @@ public class FlickerLight : MonoBehaviour
     [SerializeField]
     Light[] Lights;
     [SerializeField]
-    bool autoMap;
-    [SerializeField]
     string LightTag;
 
     void Start()
     {
+        AutoMapLights();
         StartCoroutine(flickering());
     }
 
@@ -44,6 +43,7 @@ public class FlickerLight : MonoBehaviour
                     d -= c * Time.deltaTime;
                 foreach(Light l in Lights)
                 light.intensity=d;
+
                 yield return new WaitForEndOfFrame();
 
             }
