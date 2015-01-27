@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FlashLightTest : MonoBehaviour {
+public class FlashLightTest : MonoBehaviour 
+{
 	public GameObject thisCamera;
 	public bool lightOn = true;
+	public float Sec = 0.1f;
+	public float battery = 100;
+	private float batteryDuration;
 	void Update ()
 	{
-
+		Debug.Log (battery);
 		if(Input.GetKeyDown (KeyCode.L))
 		{
 			if(lightOn == false)
@@ -23,6 +27,7 @@ public class FlashLightTest : MonoBehaviour {
 		{
 			thisCamera.GetComponent<Light> ();
 			this.light.intensity = 1.5f;
+			battery -= Time.deltaTime * Sec;
 			
 		}
 		else if (lightOn == false)
@@ -31,5 +36,14 @@ public class FlashLightTest : MonoBehaviour {
 			this.light.intensity = 0f;
 		}
 
+
+
+		
+		if (battery <= 0)
+		{
+			thisCamera.GetComponent<Light> ();
+			this.light.intensity = 0f;
+		}
 	}
+
 }
