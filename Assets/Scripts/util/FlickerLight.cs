@@ -6,12 +6,12 @@ public class FlickerLight : MonoBehaviour
 {
 
     [SerializeField]
-    float min, max;
+    float min = 0, max = 0;
 
     [SerializeField]
     Light[] Lights;
     [SerializeField]
-    string LightTag;
+    string LightTag = "FlickeringLight";
 
     void Start()
     {
